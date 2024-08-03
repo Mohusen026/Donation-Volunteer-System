@@ -1,0 +1,14 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
+  }
+  

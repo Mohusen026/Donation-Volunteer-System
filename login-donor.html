@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dontion & Volunteer System</title>
+    <link rel="icon" type="image/x-icon" href="assets/helping-hand.png" />
+
+    <!-- <-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="page-top">
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">
+          <img src="assets/logo1.png" width="50" height="50" />
+          Donation & Volunteer System
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          Don&Vol <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0 text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About us</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Login
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="login-donor.html">Donar</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="login-volunteer.html"
+                    >Volunteer</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="login-admin.html">Admin</a>
+                </li>
+                <!-- Add more items as needed -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+
+                    <div class="mb-md-5 mt-md-4 pb-5">
+
+                  <h2 class="fw-bold mb-2 text-uppercase">Donor Login</h2>
+                  <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                  
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Email" />
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" />
+                  </div>
+
+                  <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a> </p>
+                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button></div>
+                <div>
+                  <p class="mb-0"> Don't have an account? <a href="signup-donor.html" class="text-white-50 fw-bold">Sign Up</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      </section>
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
