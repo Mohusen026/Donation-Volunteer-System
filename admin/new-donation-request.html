@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="icon" type="image/x-icon" href="assets/helping-hand.png" />
+
+      <!-- Google Font these is comment  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"/>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-light">
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i id="icon-home" class="fa fa-home"></i>
+                <div class="icon_name">Admin</div>
+          </div>
+          <span id="btn"><i class="fa fa-bars"></i></span>
+        </div>
+        
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+          <img src="assets/donation.jpg" alt="Profile Picture" />
+          <div class="name_job">
+            <div class="name">Mo_Husen Haji</div>
+            <div class="email">husen@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <ul class="nav_list">
+      <li>
+        <a href="#" >
+          <i id="icon" class="fa fa-th-large" aria-hidden="true"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+
+      <li >
+        <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i id="icon" class="fa fa-users" aria-hidden="true"></i>
+          <span class="links_name">Donor</span>
+            <i class="down-arrow fa-solid fa-angle-down"></i>          
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="new-donation-request.html">New Donation Request</a></li>
+          <li><a class="dropdown-item" href="accepted-donation.html">Accepted Donation</a></li>
+          <li><a class="dropdown-item" href="rejected-donation.html">Rejected Donation</a></li>
+          <li><a class="dropdown-item" href="volunteer-allocated.html">Volunteer Allocated Donation</a></li>
+          <li><a class="dropdown-item" href="donation-received.html">Donation Received</a></li>
+          <li><a class="dropdown-item" href="donation-not-received.html">Donation Not Received</a></li>
+          <li><a class="dropdown-item" href="donation-delivered.html">Donation Delivered</a></li>
+          <li><a class="dropdown-item" href="all-donation.html">All Donation</a></li>
+        </ul>
+      </li>
+      
+      <li >
+        <a href="#" id="navbarDropdownvol"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i  id="icon" class="fa fa-user-circle" aria-hidden="true"></i>
+          <span class="links_name">Volunteer</span>
+          <i class="down-arrow fa-solid fa-angle-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownvol">
+          <li><a class="dropdown-item" href="add-donation-area.html">New Volunteer Request</a></li>
+          <li><a class="dropdown-item" href="accepted-volunteer.html">Accepted Volunteer</a></li>
+          <li><a class="dropdown-item" href="rejected-volunteer.html">Rejected Volunteer</a></li>
+          <li><a class="dropdown-item" href="all-volunteer.html">All Volunteers</a></li>
+        </ul>
+      </li>
+
+      <li >
+        <a href="#" id="navbarDropdownarea"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i id="icon" id="icon" class="fa fa-address-card" aria-hidden="true"></i> 
+          <span class="links_name">Area</span>
+          <i class="down-arrow fa-solid fa-angle-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownarea">
+          <li><a class="dropdown-item" href="add-donation-area.html">Add Donation Area</a></li>
+          <li><a class="dropdown-item" href="manage-donation-area.html">Manage Donation Area</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">
+                 <!-- info these is comment  -->
+            <i id="icon" class="fa fa-info-circle" aria-hidden="true"></i> 
+            <span class="links_name">Profile</span>
+          </a></li>
+
+          <li><a href="#">
+            <!-- key these is comment  -->
+            <i id="icon" class="fa fa-key" aria-hidden="true"></i> 
+            <span class="links_name">Change Password</span>
+          </a></li>
+          <li>
+            <a href="#">
+                 <!-- logout these is comment  -->
+                <i id="icon" class="fa fa-sign-out" aria-hidden="true"></i>
+                <span class="links_name">Logout</span>
+            </a>
+          </li>
+        </ul>     
+      </div>
+
+
+
+      <div class="home_content">
+        <!-- Home Dashboard -->
+        <div class="container mt-5 vh-100 table-responsive">
+            <h3>Donation Request</h3>
+            <hr>
+            <table id="mytable" class="table data">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th scope="col">#</th>
+                        <th scope="col">Donation Name</th>
+                        <th scope="col">Donation Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <th>1</th>
+                        <td>Mo_Husen</td>
+                        <td>19/07/2024</td>
+                        <td>pending</td>
+                        <td><a href="view-donation-detail.html">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>        
+                     
+
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+      <script>
+
+        $(document).ready(function() {
+            $('#mytable').DataTable();
+        });
+
+
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick = function() {
+            console.log("click");
+            sidebar.classList.toggle("active");
+};
+
+      </script>
+    
+  
+  </body>
+</html>    
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@
     <title>Admin</title>
     <link rel="icon" type="image/x-icon" href="assets/helping-hand.png" />
 
-    <!-- <-- Google Font --> 
+      <!-- Google Font these is comment  -->
      <link rel="preconnect" href="https://fonts.googleapis.com" />
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"/>
@@ -19,10 +19,10 @@
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
-          <i id="icon-home" class="fa fa-home"></i>
-          <div class="name">Admin</div>
+                <i id="icon-home" class="fa fa-home"></i>
+                <div class="icon_name">Admin</div>
           </div>
-          <span><i class="fa fa-bars"></i></span>
+          <span id="btn"><i class="fa fa-bars"></i></span>
         </div>
         
         <div class="profile_content">
@@ -32,16 +32,312 @@
           <div class="name_job">
             <div class="name">Mo_Husen Haji</div>
             <div class="email">husen@gmail.com</div>
-
           </div>
         </div>
       </div>
       </div>
+      <ul class="nav_list">
+      <li>
+        <a href="#" >
+          <i id="icon" class="fa fa-th-large" aria-hidden="true"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+
+      <li >
+        <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i id="icon" class="fa fa-users" aria-hidden="true"></i>
+          <span class="links_name">Donor</span>
+            <i class="down-arrow fa-solid fa-angle-down"></i>          
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="new-donation-request.html">New Donation Request</a></li>
+          <li><a class="dropdown-item" href="accepted-donation.html">Accepted Donation</a></li>
+          <li><a class="dropdown-item" href="rejected-donation.html">Rejected Donation</a></li>
+          <li><a class="dropdown-item" href="volunteer-allocated.html">Volunteer Allocated Donation</a></li>
+          <li><a class="dropdown-item" href="donation-received.html">Donation Received</a></li>
+          <li><a class="dropdown-item" href="donation-not-received.html">Donation Not Received</a></li>
+          <li><a class="dropdown-item" href="donation-delivered.html">Donation Delivered</a></li>
+          <li><a class="dropdown-item" href="all-donation.html">All Donation</a></li>
+        </ul>
+      </li>
+      
+      <li >
+        <a href="#" id="navbarDropdownvol"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i  id="icon" class="fa fa-user-circle" aria-hidden="true"></i>
+          <span class="links_name">Volunteer</span>
+          <i class="down-arrow fa-solid fa-angle-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownvol">
+          <li><a class="dropdown-item" href="add-donation-area.html">New Volunteer Request</a></li>
+          <li><a class="dropdown-item" href="accepted-volunteer.html">Accepted Volunteer</a></li>
+          <li><a class="dropdown-item" href="rejected-volunteer.html">Rejected Volunteer</a></li>
+          <li><a class="dropdown-item" href="all-volunteer.html">All Volunteers</a></li>
+        </ul>
+      </li>
+
+      <li >
+        <a href="#" id="navbarDropdownarea"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i id="icon" id="icon" class="fa fa-address-card" aria-hidden="true"></i> 
+          <span class="links_name">Area</span>
+          <i class="down-arrow fa-solid fa-angle-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownarea">
+          <li><a class="dropdown-item" href="add-donation-area.html">Add Donation Area</a></li>
+          <li><a class="dropdown-item" href="manage-donation-area.html">Manage Donation Area</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">
+                 <!-- info these is comment  -->
+            <i id="icon" class="fa fa-info-circle" aria-hidden="true"></i> 
+            <span class="links_name">Profile</span>
+          </a></li>
+
+          <li><a href="#">
+            <!-- key these is comment  -->
+            <i id="icon" class="fa fa-key" aria-hidden="true"></i> 
+            <span class="links_name">Change Password</span>
+          </a></li>
+          <li>
+            <a href="#">
+                 <!-- logout these is comment  -->
+                <i id="icon" class="fa fa-sign-out" aria-hidden="true"></i>
+                <span class="links_name">Logout</span>
+            </a>
+          </li>
+        </ul>     
       </div>
+
+
+
+      <div class="home_content">
+        <!-- Home Dashboard -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- first row first col -->
+                <div class="col-lg-3 col-md-6 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header pt-5 bg-primary text-white">
+                            <div>
+                                <h3>Total  Donor</h3>                           
+                            <hr>
+                        </div>
+                        <div class="row align-items-center  pt-3">
+                          <div class="col">
+                            <i class="fa fa-list fa-3x"></i>
+                          </div>
+                          <div class="col">
+                            <h3 class="display-3">08</h3>
+                          </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="#" class="text-primary">View Details </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- first row second col -->
+                <div class="col-lg-3 col-md-6 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header pt-5 bg-success text-white">
+                            <div>
+                                <h3>Total volunteer</h3>                           
+                            <hr>
+                        </div>
+                        <div class="row align-items-center  pt-3">
+                          <div class="col">
+                            <i class="fa fa-snowflake fa-3x"></i>
+                          </div>
+                          <div class="col">
+                            <h3 class="display-3">08</h3>
+                          </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="#" class="text-primary">View Details </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- first row third col -->
+                <div class="col-lg-3 col-md-6 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header pt-5 bg-danger text-white">
+                            <div>
+                                <h3>Total  Donation</h3>                           
+                            <hr>
+                        </div>
+                        <div class="row align-items-center  pt-3">
+                          <div class="col">
+                            <i class="fa fa-arrows fa-3x"></i>
+                          </div>
+                          <div class="col">
+                            <h3 class="display-3">08</h3>
+                          </div>
+                            </div>
+                        </div>
+                        <!-- first row foourth col -->
+                        <div class="card-footer">
+                            <h4>
+                                <a href="#" class="text-primary">View Details </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header pt-5 bg-secondary text-white">
+                            <div>
+                                <h3>Total Donation Area</h3>                           
+                            <hr>
+                        </div>
+                        <div class="row align-items-center  pt-3">
+                          <div class="col">
+                            <i class="fa fa-exchange fa-3x"></i>
+                          </div>
+                          <div class="col">
+                            <h3 class="display-3">08</h3>
+                          </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="#" class="text-primary">View Details </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+<!-- second row -->
+<div class="row mt-5">
+    <!-- second row first col -->
+    <div class="col-lg-3 col-md-6 mt-2">
+        <div class="card text-center">
+            <div class="card-header pt-5 bg-secondary text-white">
+                <div>
+                    <h3>Total New Donation Request</h3>                           
+                <hr>
+            </div>
+            <div class="row align-items-center  pt-3">
+              <div class="col">
+                <i class="fa fa-bahai fa-3x"></i>
+              </div>
+              <div class="col">
+                <h3 class="display-3">08</h3>
+              </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h4>
+                    <a href="#" class="text-primary">View Details </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <!-- second row second col -->
+    <div class="col-lg-3 col-md-6 mt-2">
+        <div class="card text-center">
+            <div class="card-header pt-5 bg-danger text-white">
+                <div>
+                    <h3>Total Accepted Donation</h3>                           
+                <hr>
+            </div>
+            <div class="row align-items-center  pt-3">
+              <div class="col">
+                <i class="fa fa-bars-progress fa-3x"></i>
+              </div>
+              <div class="col">
+                <h3 class="display-3">08</h3>
+              </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h4>
+                    <a href="#" class="text-primary">View Details </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <!-- second row third col -->
+    <div class="col-lg-3 col-md-6 mt-2">
+        <div class="card text-center">
+            <div class="card-header pt-5 bg-success text-white">
+                <div>
+                    <h3>Total Donation Delivered</h3>                           
+                <hr>
+            </div>
+            <div class="row align-items-center  pt-3">
+              <div class="col">
+                <i class="fa fa-solid fa-asterisk fa-3x"></i>
+              </div>
+              <div class="col">
+                <h3 class="display-3">08</h3>
+              </div>
+                </div>
+            </div>          
+            <div class="card-footer">
+                <h4>
+                    <a href="#" class="text-primary">View Details </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+      <!-- second row fourth col -->
+    <div class="col-lg-3 col-md-6 mt-2">
+        <div class="card text-center">
+            <div class="card-header pt-5 bg-primary text-white">
+                <div>
+                    <h3>Total Pending Donation</h3>                           
+                <hr>
+            </div>
+            <div class="row align-items-center  pt-3">
+              <div class="col">
+                <i class="fa fa-solid fa-arrows-to-circle fa-3x"></i>
+              </div>
+              <div class="col">
+                <h3 class="display-3">08</h3>
+              </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h4>
+                    <a href="#" class="text-primary">View Details </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+        </div>
+    </div>
+    
+      <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick = function() {
+            console.log("click");
+            sidebar.classList.toggle("active");
+};
+
+      </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
   </body>
-</html>  
+</html>    
+
+
+
+
+
+
+

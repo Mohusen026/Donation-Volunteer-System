@@ -3,12 +3,299 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     position: relative;
     min-height: 100vh; /* Full viewport height */
     width: 100%;
     overflow: hidden;
-  }
-  
+}
+
+.sidebar {
+    position: fixed;
+    top: 0; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    height: 100%; /* Full height */
+    width: 70px; /* Default width */
+    background: #11101d; /* Background color (adjust as needed) */
+    padding: 10px 10px; /* Padding */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.sidebar.active {
+    width: 350px; /* Expanded width when active */
+}
+
+.sidebar .logo_content .logo {
+    color: #fff; /* Text color */
+    display: flex; /* Flexbox layout */
+    height: 50px; /* Logo height */
+    width: 100%; /* Full width */
+    align-items: center; /* Center items vertically */
+    opacity: 0;  /* Initially hidden */
+    pointer-events: none; /* Disable pointer events */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1; /* Show when active */
+    pointer-events: none; /* Enable pointer events */
+}
+
+ .logo_content .logo #icon-home {
+    font-size: 20px; /* Adjust as needed */
+    margin-right: 15px; /* Add margin to space out the icon from text */
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px; /* Adjust the font size to your preference */
+    font-weight: 500; /* Adjust the font weight to make it bold */
+}
+
+/* Sidebar */
+.sidebar #btn {
+    position: absolute;
+    color: #fff; /* Replace with your preferred color */
+    left: 50%; /* Adjust position from the left */
+    top: 20px; /* Adjust position from the top */
+    font-size: 20px; /* Adjust font size as needed */
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 50px; /* Ensure text is vertically centered */
+    transform: translateX(-50%); /* Center the element horizontally based on its width */
+}
+
+.sidebar.active #btn {
+    left: 90%; /* Adjust button position when sidebar is active */
+}
+
+/* Sidebar unordered list */
+.sidebar ul {
+    margin-top: 30px; /* Space from the top */
+    padding: 0px 10px; /* Padding inside the list */
+}
+
+/* Sidebar list items */
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.sidebar ul li a #icon {
+    height: 22px;
+    min-height: 22px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 23px;
+}
+
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+/* Sidebar list item links */
+.sidebar ul li a {
+    color: #fff; /* Text color */
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    text-decoration: none; /* Removes underline from links */
+    transition: all 0.4s ease; /* Smooth transition for hover effects */
+    border-radius: 12px; /* Rounds the corners */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Hover effect for sidebar list item links */
+.sidebar ul li a:hover {
+    color: #11101d; /* Text color on hover */
+    background: #fff; /* Background color on hover */
+}
+
+
+
+
+
+/* Profile section */
+.sidebar .profile_content {
+    position: relative;
+    color: #fff; /* Set the text color */
+    margin-top: 30px; /* Space above the profile section */
+    text-align: center; /* Center-align the text */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Disable pointer events */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.sidebar.active .profile_content {
+    opacity: 1; /* Show when active */
+    pointer-events: auto; /* Enable pointer events */
+}
+
+.profile .profile_details img {
+    width: 100px; /* Adjust to your preferred size */
+    height: 100px; /* Adjust to your preferred size */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 90px; /* Rounds the image to be circular */
+}
+
+.profile .profile_details .name {
+    font-size: 22px; /* Adjust font size as needed */
+    font-weight: 500; /* Adjust font weight (e.g., 400, 700) */
+}
+
+
+
+
+
+
+
+
+
+.sidebar ul .nav_list {
+    display: block; /* Display block for navigation list */
+}
+
+.sidebar ul .dropdown-menu {
+    position: relative; /* Set position to relative */
+    background: #11101d; /* Background color */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul .dropdown-menu .dropdown-item {
+    color: #fff; /* Text color */
+    display: block; /* Display block for items */
+    padding: 10px 20px; /* Padding inside items */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.sidebar ul .dropdown-menu .dropdown-item:hover {
+    background: #ffffff; /* Hover background color */
+    color: #11101d; /* Hover text color */
+}
+
+
+
+
+
+
+
+
+
+/* home */
+
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 70px); /* Adjust width to account for the sidebar */
+    left: 70px; /* Position the content to the right of the sidebar */
+    transition: all 0.5s ease; /* Smooth transition for width and position changes */
+    /* margin-left: 50px; */ /* Uncomment if needed */
+    /* padding-right: 20px; */ /* Adjust padding-right as needed */
+}
+
+.sidebar.active ~ .home_content {
+    width: calc(100% - 350px); /* Width of the expanded sidebar */
+    left: 350px; /* Adjust the sidebar to the left when expanded */
+}
+
+.card-row {
+    height: 30%; /* Adjust based on your needs */
+}
+
+.card {
+    transition: 0.5s ; /* Smooth transition for all properties */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale up the card slightly on hover */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+.card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0,0,1); 
+    transition: transform .3s ease-out 0s;   
+    background: rgba(255, 255, 255, 0.1); /* Background color with transparency */
+    content: '';
+    pointer-events: none; /* Ensure pseudo-elements do not capture pointer events */
+}
+
+.card::before {
+    transform-origin: left top; /* Origin for the scaling animation */
+}
+
+.card::after {
+    transform-origin: right bottom; /* Origin for the scaling animation */
+}
+
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1); /* Scale up pseudo-elements on hover */
+}
+
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background: whitesmoke; /* Background color for the dropdown menu */
+}
+
+.dropdown-menu li a {
+    color: black !important; /* Text color for dropdown items */
+}
+
+.dropdown-menu li a:hover {
+    color: #fff !important; /* Text color on hover */
+    background: black !important; /* Background color on hover */
+}
+
+.down-arrow {
+    padding-left: 10px !important; /* Space between the icon and text */
+    opacity: 0 !important; /* Initially hidden */
+    pointer-events: none !important; /* Disable pointer events when hidden */
+    transition: all 0.5s ease !important; /* Smooth transition for changes */
+}
+
+.sidebar.active .down-arrow {
+    opacity: 1 !important; /* Show arrow when sidebar is active */
+    pointer-events: auto !important; /* Enable pointer events when visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
